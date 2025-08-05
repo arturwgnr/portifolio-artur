@@ -1,0 +1,107 @@
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+   background: #F9F9F9;
+background: linear-gradient(145deg, rgba(249, 249, 249, 1) 16%, rgba(247, 233, 195, 1) 46%, rgba(245, 201, 135, 1) 75%, rgba(255, 200, 117, 0.97) 93%);
+  padding: 60px 40px;
+  gap: 40px;
+
+  .contact-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 90%;
+      height: auto;
+    }
+  }
+
+  .contact-form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .text {
+      margin-bottom: 20px;
+      text-align: left;
+
+      h2 {
+        font-size: 36px;
+        margin: 0;
+        line-height: 1.2;
+        color: #222;
+      }
+
+      p {
+        margin-top: 4px;
+        font-size: 16px;
+        color: #555;
+        font-weight: 500;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        width: 100%;
+        max-width: 400px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        outline: 1px solid #f5b453;
+        border-radius: 8px;
+        font-size: 16px;
+        font-family: inherit;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      button {
+        width: 160px;
+        padding: 10px;
+        background-color: #f5b453;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background-color: darken(#f5b453, 10%);
+        }
+      }
+
+      span {
+        color: #f5b453;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .contact-form-container,
+    .contact-image {
+      width: 100%;
+    }
+
+    form {
+      align-items: center;
+    }
+  }
+}
